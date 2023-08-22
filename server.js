@@ -23,8 +23,14 @@ app.get('/', (req, res) => {
   res.render('index.ejs');
 });
 
-app.post('/todos', (req, res) => {
-  console.log(req.body.todo);
+app.post('/addToDo', (req, res) => {
+  db.collection('toDos')
+    .insertOne({ toDo: req.body.toDo, completed: false })
+    .then(result => {
+      console.log('To do added');
+      res.redirect('/');
+    })
+    .catch(err => console.error(err));
 });
 
 app.listen(PORT, () => {
