@@ -26,7 +26,8 @@ app.get('/', (req, res) => {
     .toArray()
     .then(data => {
       res.render('index.ejs', { items: data });
-    });
+    })
+    .catch(err => console.error(err));
 });
 
 app.post('/addToDo', (req, res) => {
