@@ -20,7 +20,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.render('index.ejs');
+  db.collection('toDos')
+    .find()
+    .toArray()
+    .then(data => {
+      res.render('index.ejs', { items: data });
+    });
 });
 
 app.post('/addToDo', (req, res) => {
