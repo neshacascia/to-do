@@ -9,5 +9,11 @@
     <form method="post" action="/addToDo">
       <input type="text" name="toDo" placeholder="Create a new todo..." />
     </form>
+
+    <ul>
+      <% for (let i = 0; i < items.length; i++) {%>
+      <li><span><%= items[i].toDo %></span></li>
+      <% } %>
+    </ul>
   </body>
 </html>
