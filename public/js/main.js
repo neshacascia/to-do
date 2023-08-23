@@ -5,5 +5,19 @@ Array.from(deleteBtn).forEach(elem =>
 );
 
 async function deleteToDo() {
-  console.log('Delete button clicked!');
+  const toDoId = this.parentNode.dataset.id;
+
+  try {
+    const res = await fetch('/deleteToDo', {
+      method: 'delete',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ toDo: toDoId }),
+    });
+
+    const data = await res.json();
+    console.log(data);
+    location.reload();
+  } catch (err) {
+    console.error(err);
+  }
 }
