@@ -550,10 +550,6 @@ video {
   display: block;
 }
 
-.flex {
-  display: flex;
-}
-
 .table {
   display: table;
 }
@@ -564,6 +560,10 @@ video {
 
 .hidden {
   display: none;
+}
+
+.h-\[200px\] {
+  height: 200px;
 }
 
 .border-collapse {
@@ -582,9 +582,16 @@ video {
   border-width: 1px;
 }
 
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
+.bg-bgMobileLight {
+  background-image: url('/images/bg-mobile-light.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 
 .underline {
