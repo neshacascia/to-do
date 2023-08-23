@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         bgMobileLight: "url('/images/bg-mobile-light.jpg')",
       },
+      fontFamily: {
+        body: ['Josefin Sans'],
+      },
     },
   },
   plugins: [],
