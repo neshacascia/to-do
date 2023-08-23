@@ -568,6 +568,10 @@ video {
   top: 11rem;
 }
 
+.bottom-0{
+  bottom: 0px;
+}
+
 .mx-6{
   margin-left: 1.5rem;
   margin-right: 1.5rem;
