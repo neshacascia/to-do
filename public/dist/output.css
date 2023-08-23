@@ -550,6 +550,10 @@ video {
   display: block;
 }
 
+.flex {
+  display: flex;
+}
+
 .table {
   display: table;
 }
@@ -578,6 +582,14 @@ video {
   resize: both;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 .border {
   border-width: 1px;
 }
@@ -592,6 +604,21 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .underline {
