@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         greyPurple: '#494C6B',
+        bgBody: '#FAFAFA',
       },
       backgroundImage: {
         bgMobileLight: "url('/images/bg-mobile-light.jpg')",

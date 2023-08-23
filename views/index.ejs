@@ -38,17 +38,19 @@
       </div>
     </form>
 
-    <ul
-      class="bg-white max-w-full absolute top-44 left-0 right-0 rounded-md mt-4 mx-6"
-    >
-      <% for (let i = 0; i < items.length; i++) {%>
-      <li
-        class="text-greyPurple text-sm flex gap-3 border-b-[1px] px-6 py-[18px]"
+    <section class="bg-bgBody">
+      <ul
+        class="bg-white max-w-full absolute top-44 left-0 right-0 rounded-md mt-4 mx-6"
       >
-        <img src="/images/icons/checkbox.svg" />
-        <span><%= items[i].toDo %></span>
-      </li>
-      <% } %>
-    </ul>
+        <% for (let i = 0; i < items.length; i++) {%>
+        <li
+          class="text-greyPurple text-sm flex gap-3 border-b-[1px] px-6 py-[18px]"
+        >
+          <img src="/images/icons/checkbox.svg" />
+          <span><%= items[i].toDo %></span>
+        </li>
+        <% } %>
+      </ul>
+    </section>
   </body>
 </html>
