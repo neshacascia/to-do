@@ -580,6 +580,14 @@ video {
   right: 0px;
 }
 
+.top-40{
+  top: 10rem;
+}
+
+.top-44{
+  top: 11rem;
+}
+
 .block{
   display: block;
 }
@@ -602,6 +610,14 @@ video {
 
 .h-\[200px\]{
   height: 200px;
+}
+
+.h-\[250px\]{
+  height: 250px;
+}
+
+.h-\[230px\]{
+  height: 230px;
 }
 
 .w-full{
@@ -699,6 +715,14 @@ video {
 
 .pl-5{
   padding-left: 1.25rem;
+}
+
+.pt-4{
+  padding-top: 1rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
 }
 
 .font-body{
