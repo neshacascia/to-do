@@ -618,8 +618,66 @@ video {
   padding-bottom: 3rem;
 }
 
+.pb-3{
+  padding-bottom: 0.75rem;
+}
+
 .font-body{
   font-family: Josefin Sans;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.font-semibold{
+  font-weight: 600;
+}
+
+.font-medium{
+  font-weight: 500;
+}
+
+.font-light{
+  font-weight: 300;
+}
+
+.leading-3{
+  line-height: .75rem;
+}
+
+.tracking-wider{
+  letter-spacing: 0.05em;
+}
+
+.tracking-widest{
+  letter-spacing: 0.1em;
+}
+
+.tracking-\[3px\]{
+  letter-spacing: 3px;
+}
+
+.tracking-\[1em\]{
+  letter-spacing: 1em;
+}
+
+.tracking-\[0\.9em\]{
+  letter-spacing: 0.9em;
+}
+
+.tracking-\[0\.4em\]{
+  letter-spacing: 0.4em;
+}
+
+.tracking-\[0\.3em\]{
+  letter-spacing: 0.3em;
 }
 
 .text-white{
