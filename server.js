@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
+const { ObjectId } = require('mongodb');
 const PORT = 8000;
 require('dotenv').config();
 
@@ -36,6 +37,16 @@ app.post('/addToDo', (req, res) => {
     .then(result => {
       console.log('To do added');
       res.redirect('/');
+    })
+    .catch(err => console.error(err));
+});
+
+app.delete('/deleteToDo', (req, res) => {
+  db.collection('toDos')
+    .deleteOne({ _id: new ObjectId(req.body.toDo) })
+    .then(result => {
+      console.log('To do deleted');
+      res.json('Todo Deleted');
     })
     .catch(err => console.error(err));
 });
