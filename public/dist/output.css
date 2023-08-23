@@ -646,6 +646,14 @@ video {
   margin-bottom: 5rem;
 }
 
+.mr-0{
+  margin-right: 0px;
+}
+
+.mr-auto{
+  margin-right: auto;
+}
+
 .block{
   display: block;
 }
@@ -682,8 +690,16 @@ video {
   height: 100vh;
 }
 
+.h-3{
+  height: 0.75rem;
+}
+
 .w-full{
   width: 100%;
+}
+
+.w-3{
+  width: 0.75rem;
 }
 
 .max-w-full{
@@ -835,6 +851,10 @@ video {
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-\[10px\]{
+  font-size: 10px;
 }
 
 .font-medium{
