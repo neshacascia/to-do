@@ -636,6 +636,10 @@ video {
   justify-content: space-between;
 }
 
+.rounded-md{
+  border-radius: 0.375rem;
+}
+
 .border{
   border-width: 1px;
 }
@@ -670,6 +674,11 @@ video {
 .py-\[18px\]{
   padding-top: 18px;
   padding-bottom: 18px;
+}
+
+.px-3{
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .pb-3{
