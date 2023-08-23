@@ -44,6 +44,7 @@
       >
         <% for (let i = 0; i < items.length; i++) {%>
         <li
+          data-id="<%= items[i]._id %>"
           class="text-greyPurple text-sm flex items-center gap-3 border-b-[1px] px-5 py-[18px]"
         >
           <img src="/images/icons/checkbox.svg" />
