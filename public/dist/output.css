@@ -544,8 +544,32 @@ video {
   visibility: collapse;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.top-10{
+  top: 2.5rem;
+}
+
+.top-5{
+  top: 1.25rem;
+}
+
+.top-3{
+  top: 0.75rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
+.top-16{
+  top: 4rem;
 }
 
 .block{
@@ -620,6 +644,10 @@ video {
 
 .pb-3{
   padding-bottom: 0.75rem;
+}
+
+.pt-10{
+  padding-top: 2.5rem;
 }
 
 .font-body{

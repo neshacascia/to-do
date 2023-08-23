@@ -15,14 +15,14 @@
   </head>
 
   <body class="font-body">
-    <header class="bg-bgMobileLight bg-cover bg-no-repeat h-[200px]">
+    <header class="bg-bgMobileLight bg-cover bg-no-repeat h-[200px] relative">
       <div class="text-white flex justify-between items-center py-12 px-6">
         <h1 class="text-3xl font-medium tracking-[0.4em]">TODO</h1>
         <i class="text-2xl pb-3 fa-solid fa-moon"></i>
       </div>
     </header>
 
-    <form method="post" action="/addToDo">
+    <form method="post" action="/addToDo" class="absolute top-20 pt-10 px-6">
       <input type="text" name="toDo" placeholder="Create a new todo..." />
     </form>
 
