@@ -763,6 +763,11 @@ video {
   letter-spacing: 0.4em;
 }
 
+.text-completed{
+  --tw-text-opacity: 1;
+  color: rgb(209 210 218 / var(--tw-text-opacity));
+}
+
 .text-greyPurple{
   --tw-text-opacity: 1;
   color: rgb(73 76 107 / var(--tw-text-opacity));
@@ -776,11 +781,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-completed{
-  --tw-text-opacity: 1;
-  color: rgb(209 210 218 / var(--tw-text-opacity));
 }
 
 .underline{
