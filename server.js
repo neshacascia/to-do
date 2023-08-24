@@ -41,6 +41,25 @@ app.post('/addToDo', (req, res) => {
     .catch(err => console.error(err));
 });
 
+app.put('/markCompleted', (req, res) => {
+  db.collection('toDos')
+    .updateOne(
+      {
+        _id: new ObjectId(req.body.toDo),
+      },
+      {
+        $set: {
+          completed: true,
+        },
+      }
+    )
+    .then(result => {
+      console.log('Todo marked completed');
+      res.json('Todo marked completed');
+    })
+    .catch(err => console.error(err));
+});
+
 app.delete('/deleteToDo', (req, res) => {
   db.collection('toDos')
     .deleteOne({ _id: new ObjectId(req.body.toDo) })
