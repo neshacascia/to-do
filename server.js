@@ -84,6 +84,6 @@ app.delete('/clearCompleted', (req, res) => {
     .catch(err => console.error(err));
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`The server is running on port ${PORT}.`);
 });
