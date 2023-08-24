@@ -7,6 +7,7 @@ module.exports = {
         lightGrey: '#9495A5',
         greyPurple: '#494C6B',
         bgBody: '#FAFAFA',
+        completed: '#D1D2DA',
       },
       backgroundImage: {
         bgMobileLight: "url('/images/bg-mobile-light.jpg')",
