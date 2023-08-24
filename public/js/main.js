@@ -1,16 +1,11 @@
-const toDos = document.querySelectorAll('#toDo');
 const deleteBtn = document.querySelectorAll('#deleteToDo');
 
 Array.from(deleteBtn).forEach(elem =>
   elem.addEventListener('click', deleteToDo)
 );
 
-Array.from(toDos).forEach(elem =>
-  elem.addEventListener('click', markCompleted)
-);
-
-async function markCompleted() {
-  const toDoId = this.parentNode.dataset.id;
+async function markCompleted(elem) {
+  const toDoId = elem.parentNode.dataset.id;
 
   try {
     const res = await fetch('/markCompleted', {
