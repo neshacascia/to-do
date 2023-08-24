@@ -15,8 +15,12 @@
   </head>
 
   <body class="font-body">
-    <header class="bg-bgMobileLight bg-cover bg-no-repeat h-[230px] relative">
-      <h1 class="text-white text-3xl font-medium tracking-[0.4em] py-12 px-6">
+    <header
+      class="bg-bgDesktop bg-cover bg-no-repeat h-[230px] relative lg:h-[300px]"
+    >
+      <h1
+        class="text-white text-3xl font-medium tracking-[0.4em] py-12 px-6 lg:pt-[70px] lg:px-[350px] xl:px-[450px]"
+      >
         TODO
       </h1>
     </header>
@@ -24,7 +28,7 @@
     <form
       method="post"
       action="/addToDo"
-      class="absolute top-20 left-0 right-0 pt-10 px-6"
+      class="absolute top-20 left-0 right-0 pt-10 px-6 lg:pt-[70px] lg:px-[350px] xl:px-[450px]"
     >
       <div class="bg-white flex items-center rounded-md pl-5">
         <img src="/images/icons/checkbox.svg" />
@@ -37,9 +41,9 @@
       </div>
     </form>
 
-    <section class="bg-bgBody h-screen">
+    <section class="bg-bgBody w-screen h-screen">
       <ul
-        class="bg-white max-w-full absolute top-44 left-0 right-0 rounded-md shadow-small mt-4 mx-6"
+        class="bg-white max-w-full absolute top-44 left-0 right-0 rounded-md shadow-small mt-4 mx-6 lg:mt-14 lg:mx-[350px] xl:mx-[450px]"
       >
         <% items.forEach(elem => { %>
         <li

@@ -585,6 +585,10 @@ video {
   margin-top: 1rem;
 }
 
+.mt-14{
+  margin-top: 3.5rem;
+}
+
 .block{
   display: block;
 }
@@ -623,6 +627,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .max-w-full{
@@ -683,8 +691,8 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-bgMobileLight{
-  background-image: url('/images/bg-mobile-light.jpg');
+.bg-bgDesktop{
+  background-image: url('/images/bg-desktop.png');
 }
 
 .bg-cover{
@@ -720,10 +728,6 @@ video {
   padding-bottom: 18px;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-
 .pl-5{
   padding-left: 1.25rem;
 }
@@ -734,11 +738,6 @@ video {
 
 .font-body{
   font-family: Josefin Sans;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-3xl{
@@ -799,4 +798,45 @@ video {
 
 .outline{
   outline-style: solid;
+}
+
+@media (min-width: 1024px){
+  .lg\:mx-\[350px\]{
+    margin-left: 350px;
+    margin-right: 350px;
+  }
+
+  .lg\:mt-14{
+    margin-top: 3.5rem;
+  }
+
+  .lg\:h-\[300px\]{
+    height: 300px;
+  }
+
+  .lg\:px-\[350px\]{
+    padding-left: 350px;
+    padding-right: 350px;
+  }
+
+  .lg\:px-\[450px\]{
+    padding-left: 450px;
+    padding-right: 450px;
+  }
+
+  .lg\:pt-\[70px\]{
+    padding-top: 70px;
+  }
+}
+
+@media (min-width: 1280px){
+  .xl\:mx-\[450px\]{
+    margin-left: 450px;
+    margin-right: 450px;
+  }
+
+  .xl\:px-\[450px\]{
+    padding-left: 450px;
+    padding-right: 450px;
+  }
 }
