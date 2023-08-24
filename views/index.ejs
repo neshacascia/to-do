@@ -41,26 +41,26 @@
       <ul
         class="bg-white max-w-full absolute top-44 left-0 right-0 rounded-md shadow-small mt-4 mx-6"
       >
-        <% for (let i = 0; i < items.length; i++) {%>
+        <% items.forEach(elem => { %>
         <li
-          data-id="<%= items[i]._id %>"
+          data-id="<%= elem._id %>"
           class="text-greyPurple text-sm flex items-center gap-3 border-b-[1px] px-5 py-[18px]"
         >
           <img
             onclick="markCompleted(this)"
-            src="<%= items[i].completed === true ? '/images/icons/completed-checkbox.svg' : '/images/icons/checkbox.svg' %>"
+            src="<%= elem.completed === true ? '/images/icons/completed-checkbox.svg' : '/images/icons/checkbox.svg' %>"
           />
           <span
             id="toDo"
             onclick="markCompleted(this)"
-            class="<%= items[i].completed === true ? 'text-completed line-through mr-auto' : 'mr-auto' %>"
-            ><%= items[i].toDo %></span
+            class="<%= elem.completed === true ? 'text-completed line-through mr-auto' : 'mr-auto' %>"
+            ><%= elem.toDo %></span
           >
           <button id="deleteToDo">
             <img src="/images/icons/delete.svg" class="w-3 h-3" />
           </button>
         </li>
-        <% } %>
+        <% }) %>
 
         <li
           class="text-lightGrey text-sm flex justify-between items-center px-6 py-[18px]"
