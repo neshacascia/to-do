@@ -21,7 +21,7 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
     app.use(express.urlencoded({ extended: true }));
     app.use(express.json());
 
-    app.get('/', (req, res) => {
+    app.get('https://real-onesies.cyclic.cloud/', (req, res) => {
       db.collection('toDos')
         .find()
         .toArray()
