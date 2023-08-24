@@ -74,6 +74,16 @@ app.delete('/deleteToDo', (req, res) => {
     .catch(err => console.error(err));
 });
 
+app.delete('/clearCompleted', (req, res) => {
+  db.collection('toDos')
+    .deleteMany({ completed: true })
+    .then(result => {
+      console.log('Completed todos deleted');
+      res.json('Completed todos deleted');
+    })
+    .catch(err => console.error(err));
+});
+
 app.listen(PORT, () => {
   console.log(`The server is running on port ${PORT}.`);
 });
