@@ -26,7 +26,11 @@ app.get('/', (req, res) => {
     .find()
     .toArray()
     .then(data => {
-      res.render('index.ejs', { items: data });
+      db.collection('toDos')
+        .countDocuments({ completed: false })
+        .then(itemsLeft =>
+          res.render('index.ejs', { items: data, left: itemsLeft })
+        );
     })
     .catch(err => console.error(err));
 });
