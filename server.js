@@ -10,8 +10,8 @@ let db,
   dbConnectionStr = process.env.DB_STRING,
   dbName = 'toDos';
 
-MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
-  client => {
+MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
+  .then(client => {
     console.log(`Connected to ${dbName} Database`);
     db = client.db(dbName);
 
@@ -83,9 +83,11 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true }).then(
         })
         .catch(err => console.error(err));
     });
-  }
-);
 
-app.listen(process.env.PORT || PORT, () => {
-  console.log(`The server is running on port ${PORT}.`);
-});
+    app.listen(process.env.PORT || PORT, () => {
+      console.log(`The server is running on port ${PORT}.`);
+    });
+  })
+  .catch(err => {
+    console.error(err);
+  });
