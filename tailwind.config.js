@@ -10,7 +10,7 @@ module.exports = {
         completed: '#D1D2DA',
       },
       backgroundImage: {
-        bgDesktop: "url('/images/bg-desktop.png')",
+        bgDesktop: "url('../images/bg-desktop.png')",
       },
       fontFamily: {
         body: ['Josefin Sans'],
