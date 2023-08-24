@@ -11,7 +11,7 @@ async function markCompleted(elem) {
   const toDoId = elem.parentNode.dataset.id;
 
   try {
-    const res = await fetch('/markCompleted', {
+    const res = await fetch('https://real-onesies.cyclic.cloud/markCompleted', {
       method: 'put',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ toDo: toDoId }),
@@ -29,7 +29,7 @@ async function deleteToDo() {
   const toDoId = this.parentNode.dataset.id;
 
   try {
-    const res = await fetch('/deleteToDo', {
+    const res = await fetch('https://real-onesies.cyclic.cloud/deleteToDo', {
       method: 'delete',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ toDo: toDoId }),
@@ -45,10 +45,13 @@ async function deleteToDo() {
 
 async function clearCompleted() {
   try {
-    const res = await fetch('/clearCompleted', {
-      method: 'delete',
-      headers: { 'Content-Type': 'application/json' },
-    });
+    const res = await fetch(
+      'https://real-onesies.cyclic.cloud/clearCompleted',
+      {
+        method: 'delete',
+        headers: { 'Content-Type': 'application/json' },
+      }
+    );
 
     const data = await res.json();
     console.log(data);
