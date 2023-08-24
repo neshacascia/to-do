@@ -48,10 +48,12 @@
           class="text-greyPurple text-sm flex items-center gap-3 border-b-[1px] px-5 py-[18px]"
         >
           <img
+            onclick="markCompleted(this)"
             src="<%= items[i].completed === true ? '/images/icons/completed-checkbox.svg' : '/images/icons/checkbox.svg' %>"
           />
           <span
             id="toDo"
+            onclick="markCompleted(this)"
             class="<%= items[i].completed === true ? 'text-completed line-through mr-auto' : 'mr-auto' %>"
             ><%= items[i].toDo %></span
           >
