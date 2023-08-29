@@ -7,21 +7,37 @@ Array.from(deleteBtn).forEach(elem =>
 
 clearCompletedBtn.addEventListener('click', clearCompleted);
 
-async function markCompleted(elem) {
+async function updateCompleteStatus(elem) {
   const toDoId = elem.parentNode.dataset.id;
 
-  try {
-    const res = await fetch('/markCompleted', {
-      method: 'put',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ toDo: toDoId }),
-    });
+  if (elem.className.includes('not-completed')) {
+    try {
+      const res = await fetch('/markCompleted', {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ toDo: toDoId }),
+      });
 
-    const data = await res.json();
-    console.log(data);
-    location.reload();
-  } catch (err) {
-    console.error(err);
+      const data = await res.json();
+      console.log(data);
+      location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  } else {
+    try {
+      const res = await fetch('/markIncomplete', {
+        method: 'put',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ toDo: toDoId }),
+      });
+
+      const data = await res.json();
+      console.log(data);
+      location.reload();
+    } catch (err) {
+      console.error(err);
+    }
   }
 }
 
