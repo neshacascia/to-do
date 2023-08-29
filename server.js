@@ -62,6 +62,19 @@ MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
         .catch(err => console.error(err));
     });
 
+    app.put('/markIncomplete', (req, res) => {
+      db.collection('toDos')
+        .updateOne(
+          { _id: new ObjectId(req.body.toDo) },
+          { $set: { completed: false } }
+        )
+        .then(result => {
+          console.log('Todo marked incomplete');
+          res.json('Todo marked incomplete');
+        })
+        .catch(err => console.error(err));
+    });
+
     app.delete('/deleteToDo', (req, res) => {
       db.collection('toDos')
         .deleteOne({ _id: new ObjectId(req.body.toDo) })
