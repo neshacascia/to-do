@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const homeController = require('../controllers/home');
 
-router.get('/', homeController.getIndex);
+router.get('/', homeController.getToDos);
 
 router.post('/addToDo', homeController.addToDo);
 
 router.put('/markCompleted', homeController.markCompleted);
 
-router.put('/markIncomplete', homeController.markIncomplete);
+router.put('/markIncomplete', homeController.markIncompleted);
 
 router.delete('/deleteToDo', homeController.deleteToDo);
 
