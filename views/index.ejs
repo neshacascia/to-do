@@ -54,13 +54,13 @@
           class="text-greyPurple text-sm flex items-center gap-3 border-b-[1px] px-5 py-[18px]"
         >
           <img
-            onclick="markCompleted(this)"
+            onclick="updateCompleteStatus(this)"
             class="<%= elem.completed === true ? 'completed' : 'not-completed' %>"
             src="<%= elem.completed === true ? '/images/icons/completed-checkbox.svg' : '/images/icons/checkbox.svg' %>"
           />
           <span
             id="toDo"
-            onclick="markCompleted(this)"
+            onclick="updateCompleteStatus(this)"
             class="<%= elem.completed === true ? 'text-completed line-through mr-auto completed' : 'mr-auto not-completed' %>"
             ><%= elem.toDo %></span
           >
