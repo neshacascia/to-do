@@ -16,6 +16,7 @@ This is a simple todo app.
 ## Features
 - [x] Add new todos to the list
 - [x] Mark todos as complete
+- [x] Mark completed todos as incomplete
 - [x] Delete todos from the list
 - [x] Clear all completed todos
 
