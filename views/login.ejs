@@ -32,6 +32,9 @@
       <div
         class="bg-white max-w-full absolute top-44 left-0 right-0 flex flex-col items-center gap-6 rounded-md shadow-small py-10 px-6 mt-4 mx-6 lg:mt-14 lg:mx-[350px] xl:mx-[450px]"
       >
+        <h2 class="text-xl font-semibold">Login</h2>
+        <p>Enter your details to sign in to your account</p>
+
         <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => {
         %>
         <div class="alert alert-danger"><%= el.msg %></div>
