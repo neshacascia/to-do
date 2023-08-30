@@ -12,7 +12,7 @@ async function updateCompleteStatus(elem) {
 
   if (elem.className.includes('not-completed')) {
     try {
-      const res = await fetch('/markCompleted', {
+      const res = await fetch('/toDos/markCompleted', {
         method: 'put',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ toDo: toDoId }),
@@ -26,7 +26,7 @@ async function updateCompleteStatus(elem) {
     }
   } else {
     try {
-      const res = await fetch('/markIncomplete', {
+      const res = await fetch('/toDos/markIncomplete', {
         method: 'put',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ toDo: toDoId }),
@@ -45,7 +45,7 @@ async function deleteToDo() {
   const toDoId = this.parentNode.dataset.id;
 
   try {
-    const res = await fetch('/deleteToDo', {
+    const res = await fetch('/toDos/deleteToDo', {
       method: 'delete',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ toDo: toDoId }),
@@ -61,7 +61,7 @@ async function deleteToDo() {
 
 async function clearCompleted() {
   try {
-    const res = await fetch('/clearCompleted', {
+    const res = await fetch('/toDos/clearCompleted', {
       method: 'delete',
       headers: { 'Content-Type': 'application/json' },
     });
