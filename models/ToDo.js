@@ -9,6 +9,10 @@ const ToDoSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
   },
+  userId: {
+    type: String,
+    required: true,
+  },
 });
 
 module.exports = mongoose.model('ToDo', ToDoSchema);
