@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <title>Signup</title>
+  </head>
+
+  <body>
+    <header
+      class="bg-bgDesktop bg-cover bg-no-repeat h-[230px] relative lg:h-[300px]"
+    >
+      <h1
+        class="text-white text-3xl font-medium tracking-[0.4em] py-12 px-6 lg:pt-[70px] lg:px-[350px] xl:px-[450px]"
+      >
+        TODO
+      </h1>
+    </header>
+
+    <section class="bg-bgBody w-screen h-screen">
+      <div
+        class="bg-white max-w-full absolute top-44 left-0 right-0 flex flex-col items-center gap-6 rounded-md shadow-small py-10 px-6 mt-4 mx-6 lg:mt-14 lg:mx-[350px] xl:mx-[450px]"
+      >
+        <h2 class="text-xl font-semibold -mb-3">Signup</h2>
+        <p>Enter your details to create an account</p>
+
+        <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => {
+        %>
+        <div class="text-red-500 text-sm"><%= el.msg %></div>
+        <% }) %> <% } %>
+
+        <form action="/signup" method="POST" class="w-full flex flex-col gap-3">
+          <input
+            type="text"
+            name="userName"
+            placeholder="Username"
+            class="text-sm border-[1px] rounded-md py-2 px-3 mx-10"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="text-sm border-[1px] rounded-md py-2 px-3 mx-10"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="text-sm border-[1px] rounded-md py-2 px-3 mx-10"
+          />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            class="text-sm border-[1px] rounded-md py-2 px-3 mx-10"
+          />
+          <button
+            type="submit"
+            class="text-white font-semibold tracking-wider rounded-md py-3 px-3 mt-6 mx-10 button"
+          >
+            Signup
+          </button>
+        </form>
+
+        <p class="text-sm">
+          Already have an account?
+          <a href="/login" class="font-semibold">Login Now</a>
+        </p>
+      </div>
+    </section>
+  </body>
+</html>
