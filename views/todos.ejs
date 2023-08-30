@@ -60,13 +60,13 @@
         >
           <img
             onclick="updateCompleteStatus(this)"
-            class="<%= elem.completed === true ? 'completed' : 'not-completed' %>"
+            class="<%= elem.completed === true ? 'completed' : 'not-completed' %> hover:cursor-pointer"
             src="<%= elem.completed === true ? '/images/icons/completed-checkbox.svg' : '/images/icons/checkbox.svg' %>"
           />
           <span
             id="toDo"
             onclick="updateCompleteStatus(this)"
-            class="<%= elem.completed === true ? 'text-completed line-through mr-auto completed' : 'mr-auto not-completed' %>"
+            class="<%= elem.completed === true ? 'text-completed line-through mr-auto completed' : 'mr-auto not-completed' %> hover:cursor-pointer"
             ><%= elem.toDo %></span
           >
           <button id="deleteToDo">
