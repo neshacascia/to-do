@@ -3,3 +3,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button {
+  background: linear-gradient(225deg, #5596ff 0%, #ac2deb 100%);
+}
+
+.button-border {
+  border: 2px solid #ac2deb;
+}

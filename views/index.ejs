@@ -14,7 +14,7 @@
       referrerpolicy="no-referrer"
     />
     <link href="/dist/output.css" rel="stylesheet" />
-    <title>Home</title>
+    <title>Todo</title>
   </head>
 
   <body>
@@ -29,19 +29,27 @@
     </header>
     <section class="bg-bgBody w-screen h-screen">
       <div
-        class="bg-white max-w-full absolute top-44 left-0 right-0 flex flex-col items-center gap-4 rounded-md shadow-small py-10 px-6 mt-4 mx-6 lg:mt-14 lg:mx-[350px] xl:mx-[450px]"
+        class="bg-white max-w-full absolute top-44 left-0 right-0 flex flex-col items-center gap-6 rounded-md shadow-small py-10 px-6 mt-4 mx-6 lg:mt-14 lg:mx-[350px] xl:mx-[450px]"
       >
-        <p class="text-center">
-          todo is designed to simplify your day-to-day tasks without
+        <p class="text-center tracking-wide">
+          Todo is designed to simplify your day-to-day tasks without
           overwhelming you with unnecessary features. With a clean interface,
           staying productive has never been easier.
         </p>
 
-        <p class="mb-6">Ready to take control of your tasks?</p>
+        <p class="mb-4">Ready to take control of your tasks?</p>
 
         <div class="flex gap-4">
-          <a href="/login">Login</a>
-          <a href="/signup">Signup</a>
+          <a
+            href="/login"
+            class="tracking-wider rounded-md py-3 px-8 button-border"
+            >Login</a
+          >
+          <a
+            href="/signup"
+            class="text-white tracking-wider rounded-md py-3 px-8 button"
+            >Signup</a
+          >
         </div>
       </div>
     </section>
