@@ -649,6 +649,10 @@ video {
   resize: both;
 }
 
+.flex-col{
+  flex-direction: column;
+}
+
 .items-center{
   align-items: center;
 }
@@ -667,6 +671,10 @@ video {
 
 .gap-\[18px\]{
   gap: 18px;
+}
+
+.gap-4{
+  gap: 1rem;
 }
 
 .rounded-md{
