@@ -1,17 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const authController = require('../controllers/auth');
 const homeController = require('../controllers/home');
+const { ensureGuest } = require('../middleware/auth');
 
-router.get('/', homeController.getToDos);
+router.get('/', ensureGuest, homeController.getIndex);
 
-router.post('/addToDo', homeController.addToDo);
+router.get('/login', authController.getLogin);
 
-router.put('/markCompleted', homeController.markCompleted);
+router.post('/login', authController.postLogin);
 
-router.put('/markIncomplete', homeController.markIncompleted);
+router.get('/logout', authController.logout);
 
-router.delete('/deleteToDo', homeController.deleteToDo);
+router.get('/signup', authController.getSignup);
 
-router.delete('/clearCompleted', homeController.clearCompleted);
+router.post('/signup', authController.postSignup);
 
 module.exports = router;
