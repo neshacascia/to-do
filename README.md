@@ -9,11 +9,14 @@ This is a simple todo app.
 ## Built with
 - Express
 - Node
-- MongoDB
+- Mongoose
+- Passport.js
 - TailwindCSS
 - EJS
 
 ## Features
+- [x] Sign in to create an account
+- [x] Log in to view their todos
 - [x] Add new todos to the list
 - [x] Mark todos as complete
 - [x] Mark completed todos as incomplete
